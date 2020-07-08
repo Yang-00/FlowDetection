@@ -1,8 +1,5 @@
-# 在学习关于flask的知识点，这是在csdn上面找的一篇文章，主要内容关于图片的上传
-'''
-版权声明：本文为CSDN博主「Java知音_」的原创文章，遵循CC 4.0 BY-SA版权协议，转载请附上原文出处链接及本声明。
-原文链接：https://blog.csdn.net/weixin_36380516/java/article/details/80347192
-'''
+# 在学习关于flask的知识点，主要内容关于图片的上传
+
 
 from flask import Flask, render_template, request
 import os
@@ -23,3 +20,7 @@ def up_photo():
 
 if __name__ == '__main__':
     app.run(debug=False)
+'''
+版权声明：本文为CSDN博主「Java知音_」的原创文章，遵循CC 4.0 BY-SA版权协议，转载请附上原文出处链接及本声明。
+原文链接：https://blog.csdn.net/weixin_36380516/java/article/details/80347192
+'''

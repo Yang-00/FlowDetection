@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+<div align="center">
+<h2>人流密度管理系统-用户登录页面</h2>
+    <br>
+    <br>
+    <br>
+
+    {% if message %} {{message}} {% endif %}
+    <form method="POST">
+
+        <input type="text" name="username" placeholder="username">
+        <br>
+        <input type="password" name="password" placeholder="password">
+        <br>
+        <br>
+        <br>
+        <input type="submit" value="提交">
+        <input type="reset" value="清除">
+    </form>
+</div>
+
+</body>
+</html>

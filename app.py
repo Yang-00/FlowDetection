@@ -1,6 +1,5 @@
 # 在学习关于flask的知识点，主要内容关于图片的上传
 
-
 from flask import Flask, render_template, request
 import os
 

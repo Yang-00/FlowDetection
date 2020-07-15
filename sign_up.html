@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<!----段文思-7.14---->
+<html lang="en">
+<head>
+    <title>注册</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!---link href="css/style.css" rel="stylesheet"--->
+    <script>
+//判断是否由字母，数字，下划线构成
+function f(str) { return /^\w+$/.test(str); }
+
+//判断邮箱格式
+function f1(str) {return /^([a-zA-Z]|[0-9])(\w|\-)+@[a-zA-Z0-9]+\.([a-zA-Z]{2,4})$/.test(str)}
+
+//对注册格式进行判断
+function SignUP() {
+    var username = document.forms["sign_up"]["username"].value;
+    var password1 = document.forms["sign_up"]["password1"].value;
+    var password2 = document.forms["sign_up"]["password2"].value;
+    var email = document.forms["sign_up"]["email"].value;
+    if(!f(username)){
+        alert("请输入正确格式的用户名");
+        return false;
+    }
+    if(password1!=password2){
+        alert("两次输入密码不一致");
+        return false;
+    }
+    if(password1.length<6){
+        alert("密码不得少于六位");
+        return false;
+    }
+    if(!f(password1)){
+        alert("密码格式不正确");
+        return false;
+    }
+    if(!f1(email)){
+        alert("邮箱格式不正确");
+        return false;
+    }
+    return true;
+}
+    </script>
+</head>
+
+<body>
+    <form name="sign_up" method="post" action='/sign_up' onsubmit="return SignUP()">
+        <label>用户名：<input type="text" name="username" required="required" placeholder="只包括字母、数字和下划线"></label>
+        <br>
+        <label>密码：<input type="password" name="password1"  required="required"  placeholder="包括字母、数字和下划线且不少于六位"></label>
+        <br>
+        <label>请再次输入密码：<input type="password" name="password2"  required="required"  placeholder="请再次输入密码"></label>
+        <br>
+        <label>邮箱：<input type="email" name="email"  required="required"  placeholder="请输入可用的邮箱"></label>
+        <br>
+        <input type="submit" value="注册">
+        <h5><a href="{{ url_for('sign_in') }}">已有账户？登录</a></h5>
+    </form>
+
+    {% if error %}
+        <p><h5>{{error}}</h5></p>
+    {% endif %}
+</body>
+</html>

@@ -1,18 +1,75 @@
+
 <!DOCTYPE html>
+<!----/*段文思*/---->
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <title>人流密度计数</title>
+    <link rel="shortcut icon" href="static/logo.jpg" type="image/x-icon"/>
+    <link href="static/css/upload.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
-<br><br><br>
-    <h1>人流密度计数</h1>
-    <form action="" enctype='multipart/form-data' method='POST'>
-        <input type="file" name="file" style="margin-top:20px;"/>
-        <br>
-        <i>请输入你想计数的物品（人，狗，猫）：</i>
-        <input type="text" class="txt_input" name="name"  value="人" style="margin-top:10px;"/>
-        <input type="submit" value="上传" class="button-new" style="margin-top:15px;"/>
-    </form>
+
+    <div class="ftop">
+            <ul>
+                <li>
+                    <img alt="here" src="static/people.jpg" width="20" height="20"/>
+                </li>
+                <li>
+                    <img alt="here" src="static/letter.jpg" width="20" height="20"/>
+                </li>
+                <li>
+                    <img alt="here" src="static/search.jpg" width="20" height="20"/>
+                </li>
+            </ul>
+    </div>
+    <div class="top">
+
+            <ul>
+            <li>
+                <img  alt="here" src="static/logo.jpg" width="50" height="50"/>
+            </li>
+            <li>
+                <a href="#">首页</a>
+                <ul>
+                    <li><a href="#">第二页</a></li>
+                    <li><a href="#">第三页</a></li>
+                </ul>
+            </li>
+            <li><a href="#">航班信息</a></li>
+            <li><a href="#">管理指南</a></li>
+            <li><a href="#"><b>交通信息</b></a></li>
+            <li><a href="#">机场商业</a></li>
+                <li><a href="{{ url_for('sign_in') }}"><button class="button-new">登录</button></a></li>
+                <li><a href="{{ url_for('sign_up') }}"><button class="button-new">注册</button></a></li>
+
+            </ul>
+
+    </div>
+    <img alt="here" src="static/flight.jpg" width="100%" height="500px" style="display: block"/>
+    <img alt="here" src="static/airport.jpg" width="100%" height="520px" style="display: block"/>
+
+
+
+
+    <div class="two">
+        <form action="/" enctype='multipart/form-data' method='POST'>
+            <div class="mytxt">提交图片文件计算人数：</div>
+            <input class="choose" type="file" name="file" style="margin-top:20px; margin-bottom: 20px"/>
+
+
+
+            <input type="submit" value="上传" class="button-new" style="margin-top:15px;margin-bottom: 20px"/>
+
+
+
+        </form>
+    </div>
+    <div class="footer">
+        <p>© Morning and Night.</p>
+        <p>Made with ♥ by lovely parterners.</p>
+    </div>
+
 </body>
+
 </html>
